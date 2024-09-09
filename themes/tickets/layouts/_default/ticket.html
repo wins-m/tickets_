@@ -29,21 +29,21 @@
           </li>
         {{ end }}
 
-        {{ with .Params.price }}
-          <li>
-            <span class="visually-hide">The ticket cost</span>
-            <small class="ticket__price">${{ . }}</small>
-          </li>
-        {{ end }}
-
-        {{ with .Params.ratings }}
+        {{ with .Params.remark }}
           <li class="ticket__rating">
             <span class="visually-hide">
-              The movie is rated
+              The movie is remarked
             </span>
             {{ range . }}
               {{ . }}
             {{ end }}
+          </li>
+        {{ end }}
+
+        {{ with .Params.price }}
+          <li>
+            <span class="visually-hide">The ticket cost</span>
+            <small class="ticket__price">¥{{ . }}</small>
           </li>
         {{ end }}
 

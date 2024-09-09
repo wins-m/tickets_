@@ -7,31 +7,50 @@
 
       {{ $location := "" }}
 
-      {{ if or (eq .Title "Marquette Cinemas") (eq .Title "Carmike Royal Cinema 10") (eq .Title "Delft Theatre") }}
-        {{ $location = "Marquette, Michigan" }}
-      {{ else if eq .Title "Konsertpaleet" }}
-        {{ $location = "Bergan, Norway" }}
-      {{ else if eq .Title "TOHO Cinemas Shinjuku" }}
-        {{ $location = "Tokyo, Japan" }}
-      {{ else if eq .Title "Cinemark Tinseltown Grapevine" }}
-        {{ $location = "Grapevine, Texas" }}
-      {{ else if eq .Title "AMC Empire 25" }}
-        {{ $location = "New York, New York" }}
-      {{ else if eq .Title "Sambio Egilsholl" }}
-        {{ $location = "Reykjavik, Iceland" }}
-      {{ else if eq .Title "Regal Entertainment Group" }}
-        {{ $location = "Appleton, Wisconsin" }}
-      {{ else if eq .Title "Century Theaters Next Gen" }}
-        {{ $location = "Tucson, Arizona" }}
+      {{ if or (eq .Title "太平洋影城·北京中关村店") (eq .Title "北京大学百周年纪念讲堂") (eq .Title "中国电影资料馆艺术影院") (eq .Title "北京剧院") (eq
+      .Title "北京海淀工人文化宫") (eq .Title "海淀剧院") (eq .Title "华联影院·万柳店") (eq .Title "UME影城·华兴IMAX店") (eq .Title "美嘉欢乐影城中关村店")
+      }}
+      {{ $location = "Haidian, Beijing" }}
+      {{ else if eq .Title "上海大光明电影院" }}
+      {{ $location = "Yangpu, Shanghai" }}
+      {{ else if eq .Title "浙影时代·宁波东门银泰店" }}
+      {{ $location = "Haishu, Ningbo" }}
+      {{ else if or (eq .Title "北京当代MOMA百老汇电影中心影院") (eq .Title "北京搜秀影城") }}
+      {{ $location = "Dongcheng, Beijing" }}
+      {{ else if eq .Title "国贸国际影城·舒兰店" }}
+      {{ $location = "Shulan, Jilin" }}
+      {{ else if eq .Title "舟山六横影院" }}
+      {{ $location = "Putuo, Zhoushan" }}
+      {{ else if or (eq .Title "舟山时代金球影城") (eq .Title "舟山影城") (eq .Title "舟山太平洋影城") (eq .Title "舟山上影联和影院") }}
+      {{ $location = "Dinghai, Zhoushan" }}
+      {{ else if or (eq .Title "万象影城·杭州万象城IMAX激光店") (eq .Title "橙天嘉禾影城·杭州来福士店") (eq .Title "万达影城钱江新城店") (eq .Title
+      "德信影城杭州之翼店")}}
+      {{ $location = "Shangcheng, Hangzhou" }}
+      {{ else if eq .Title "保利万和CFR国际影城" }}
+      {{ $location = "Xiaoshan, Hangzhou" }}
+      {{ else if eq .Title "万达影城杭州星耀城店" }}
+      {{ $location = "Binjiang, Hangzhou" }}
+      {{ else if eq .Title "万达影城金版纳尚城店" }}
+      {{ $location = "Jinghong, Xishuangbanna" }}
+      {{ else if eq .Title "SFX Cinema, Maya Chiang Mai" }}
+      {{ $location = "Chiang Mai, Thailand" }}
+      {{ else if eq .Title "House Samyan" }}
+      {{ $location = "Bangkok, Thailand" }}
+      {{ else if or (eq .Title "TOV CINEMAS 1ST AVENUE") (eq .Title "MmCineplexes Prangin Mall")}}
+      {{ $location = "Penang, Malaysia" }}
+      {{ else if eq .Title "TGV CINEMAS SURIA KLCC" }}
+      {{ $location = "Kuala Lumpur, Malaysia" }}
+      {{ else if eq .Title "The Projector" }}
+      {{ $location = "Central Singapore, Singapore" }}
       {{ end }}
-
+      
       <small class="ticket__theater">
 
         {{ if $location }}
-          <span class="visually-hide">Located in</span>
-          {{ $location }}
+        <span class="visually-hide">Located in</span>
+        {{ $location }}
         {{ else }}
-          Rated
+        Rated
         {{ end }}
 
       </small>
@@ -39,7 +58,7 @@
     </div>
 
     {{ if not (isset .Params "date") }}
-      <a class="ticket__link" href="{{ .Permalink }}" aria-label="View {{ .Title }}"></a>
+    <a class="ticket__link" href="{{ .Permalink }}" aria-label="View {{ .Title }}"></a>
     {{ end }}
 
   </div>

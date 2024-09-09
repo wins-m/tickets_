@@ -1,16 +1,16 @@
-baseURL = "https://tickets.proffer.dev/"
-languageCode = "en-us"
-title = "Dead Man's Brew"
+baseURL = "https://wins-m.github.io/tickets/"
+languageCode = "zh-cn"
+title = "噗嗤！收藏集！"
 theme = "tickets"
 paginate = 60
 enableRobotsTXT = true
 
 [taxonomies]
   theater = "theaters"
-  rating = "ratings"
+  #rating = "ratings"
 
 [params]
-  description = "The ongoing movie ticket collection of Jacob Proffer, started in 2007."
+  description = "The ongoing movie ticket collection of Wins.M., started in 2018."
   images = ["images/tickets-social.jpg"]
   subTitle = "A Movie Ticket Collection"
 
@@ -33,10 +33,4 @@ enableRobotsTXT = true
     name = "Theaters"
     pageRef = "/theaters/"
     weight = 3
-
-  [[menu.main]]
-    identifier = "ratings"
-    name = "Ratings"
-    pageRef = "/ratings/"
-    weight = 4
 
