@@ -1,0 +1,19 @@
+@mixin screen-above($screen-size) {
+  @media screen and (min-width: $screen-size) {
+    @content;
+  }
+}
+
+@mixin screen-below($screen-size) {
+  @media screen and (max-width: ($screen-size - 1px)) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
