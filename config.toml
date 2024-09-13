@@ -14,6 +14,10 @@ enableRobotsTXT = true
   images = ["images/tickets-social.jpg"]
   subTitle = "A Movie Ticket Collection"
 
+[author]
+  name = "Wins. M."
+  homepage = "https://wins-m.github.io/"
+
 [menu]
 
   [[menu.main]]
