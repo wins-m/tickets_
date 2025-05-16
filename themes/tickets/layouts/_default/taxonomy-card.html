@@ -42,6 +42,10 @@
       {{ $location = "Kuala Lumpur, Malaysia" }}
       {{ else if eq .Title "The Projector" }}
       {{ $location = "Central Singapore, Singapore" }}
+      {{ else if eq .Title "新宿武蔵野館" }}
+      {{ $location = "Shinjuku, Tokyo" }}
+      {{ else if eq .Title "出町座" }}
+      {{ $location = "Kamigyo, Kyoto" }} 
       {{ end }}
       
       <small class="ticket__theater">
