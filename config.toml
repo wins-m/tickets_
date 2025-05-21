@@ -30,11 +30,11 @@ enableRobotsTXT = true
     identifier = "about"
     name = "About"
     pageRef = "/about/"
-    weight = 2
+    weight = 3
 
   [[menu.main]]
     identifier = "theaters"
     name = "Theaters"
     pageRef = "/theaters/"
-    weight = 3
+    weight = 2
 
