@@ -2,7 +2,7 @@ baseURL = "https://wins-m.github.io/tickets/"
 languageCode = "zh-cn"
 title = "噗嗤！收藏集！"
 theme = "tickets"
-paginate = 60
+pagination.pagerSize = 60
 enableRobotsTXT = true
 
 [taxonomies]
@@ -13,10 +13,6 @@ enableRobotsTXT = true
   description = "The ongoing movie ticket collection of Wins.M., started in 2018."
   images = ["images/tickets-social.jpg"]
   subTitle = "A Movie Ticket Collection"
-
-[author]
-  name = "Wins. M."
-  homepage = "https://github.com/wins-m/"
 
 [menu]
 
