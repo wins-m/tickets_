@@ -3,8 +3,9 @@
 
     <div class="grid ticket__content">
 
-      <h3 class="ticket__headline">
-        {{ .Title }}
+      {{ $headline := .Title }}
+      <h3 class="ticket__headline{{ if gt (len $headline) 28 }} ticket__headline--long{{ end }}">
+        {{ $headline }}
         {{ with .Params.year }}
           <span style="font-size:0.8em; color:#888;">({{ . }})</span>
         {{ end }}

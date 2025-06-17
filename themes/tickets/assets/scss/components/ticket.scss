@@ -22,13 +22,22 @@
     text-wrap: balance;
     line-height: 1;
   }
+  
+  &__headline--long {
+    font-size: 1.2rem;
+    padding: var(--size-0) 0;
+    margin: 0;
+    border-bottom: 1px solid var(--color-scheme-border);
+    text-wrap: balance;
+    line-height: 1.2;
+  }
 
   &__theater {
     order: -1;
   }
 
   &__info {
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
     padding: var(--size-0) 0;
   }
@@ -37,6 +46,7 @@
     padding: var(--size-0);
     font-size: 1.2rem;
     border: 1px solid var(--color-scheme-border);
+    line-height: 0.4;
   }
 
   &__link {
