@@ -3,7 +3,12 @@
 
     <div class="grid ticket__content">
 
-      <h3 class="ticket__headline">{{ .Title }}</h3>
+      <h3 class="ticket__headline">
+        {{ .Title }}
+        {{ with .Params.year }}
+          <span style="font-size:0.8em; color:#888;">({{ . }})</span>
+        {{ end }}
+      </h3>
 
       {{ with .Params.theaters }}
         <small class="ticket__theater">
