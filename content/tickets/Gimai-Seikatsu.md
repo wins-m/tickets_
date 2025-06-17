@@ -1,6 +1,6 @@
 ---
 title: "Gimai Seikatsu"
-year: 2024
+year: "2024"
 date: "2025-06-06"
 theaters: ["Jellyfin"]
 remark: ["TV-14"]
