@@ -33,4 +33,6 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: wins-m/tickets
+          publish_branch: gh-pages  # Pages仓库的分支（通常是main或gh-pages）
           publish_dir: ./public
+          keep_files: true  # 完全覆盖目标仓库
