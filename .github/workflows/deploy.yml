@@ -31,7 +31,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          external_repository: yourusername/yourusername.github.io
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: wins-m/tickets
           publish_dir: ./public
-
