@@ -28,8 +28,10 @@ jobs:
           python scripts/parse_douban.py
 
       - name: Commit and push new content
+        permissions:
+          contents: write
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@users.noreply.github.com"
