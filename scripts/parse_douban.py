@@ -115,7 +115,7 @@ def get_rating_from_tmdb(id, type="imdb_id", regions=["CN", "HK", "TW", "US", "J
             f"https://api.themoviedb.org/3/movie/{movie_id}/release_dates?api_key={TMDB_API_KEY}").json()
         # 第三步：按优先级查找分级
         region_rating = {x['iso_3166_1']: x['release_dates'][0]['certification']
-                         for x in release_data['results'] if x['rating']}
+                         for x in release_data['results'] if x['release_dates'][0]['certification']}
         if region_rating:
             for region in regions:
                 if region in region_rating:
