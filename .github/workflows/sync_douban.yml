@@ -27,6 +27,7 @@ jobs:
         env:
           DOUBAN_RSS_URL: ${{ secrets.DOUBAN_RSS_URL }}
           OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: |
           python scripts/parse_douban.py
 
