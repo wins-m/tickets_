@@ -171,7 +171,7 @@ def generate_markdown(movie_info):
     douban_url = movie_info['douban_url']
     year = extract_year_from_douban(douban_url)
     imdb_id = get_imdb_id(douban_url)
-    rating = get_rating_from_omdb(imdb_id) or get_rating_from_tmdb(imdb_id) 
+    rating = get_rating_from_tmdb(imdb_id) or get_rating_from_omdb(imdb_id) 
 
     content = f"""---
 title: "{movie_info['title_foreign']}"
