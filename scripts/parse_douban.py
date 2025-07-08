@@ -100,7 +100,7 @@ def get_rating_from_omdb(imdb_id):
     return ""
 
 
-def get_rating_from_tmdb(id, type="imdb_id", regions=["CN", "HK", "TW", "US", "JP", "FR", "GB", "DE", "IT", "ES", "CZ", "KR"]):
+def get_rating_from_tmdb(id, type="imdb_id", regions=["US", "JP", "CN", "HK", "TW", "FR", "GB", "DE", "IT", "ES", "CZ", "KR"]):
     """通过IMDB ID查询TMDB分级"""
     url = f"https://api.themoviedb.org/3/find/{id}?external_source={type}&api_key={TMDB_API_KEY}"
     try:
