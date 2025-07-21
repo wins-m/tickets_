@@ -1,0 +1,11 @@
+---
+title: "進撃の巨人 The Final Season Part.2"
+year: ""
+date: "2025-02-05"
+theaters: ["Jellyfin"]
+rating: ""
+remark: []
+imdb_id: ""
+cover: ""
+douban_url: "https://movie.douban.com/subject/35290710/"
+---
