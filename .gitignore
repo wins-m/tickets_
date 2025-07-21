@@ -5,3 +5,6 @@ resources/
 # OSX
 .DS_Store
 .vscode
+
+# Python
+**/__pycache__

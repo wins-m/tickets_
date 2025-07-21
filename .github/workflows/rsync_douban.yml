@@ -1,0 +1,40 @@
+name: Sync Douban to Hugo Content (ALL)
+
+on:
+  workflow_dispatch:        # 支持手动触发
+
+permissions: write-all
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r scripts/requirements.txt
+
+      - name: Fetch and parse Douban RSS
+        env:
+          DOUBAN_USER_ID: ${{ secrets.DOUBAN_USER_ID }}
+          DOUBAN_COOKIE: ${{ secrets.DOUBAN_COOKIE }}
+          OMDB_API_KEY: ${{ secrets.OMDB_API_KEY }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: |
+          python scripts/rsync_douban.py
+
+      - name: Commit and push new content
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@users.noreply.github.com"
+          git add content/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto: Add (ALL) movies from Douban" && git push)
