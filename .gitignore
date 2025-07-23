@@ -1,6 +1,7 @@
 # Hugo
 public/
 resources/
+content/tickets.*
 
 # OSX
 .DS_Store
