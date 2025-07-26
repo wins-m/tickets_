@@ -8,7 +8,7 @@ document.querySelectorAll('.ticket__theater, .ticket__headline, .ticket__headlin
   el.childNodes.forEach(node => {
     if (node.nodeType === Node.TEXT_NODE) {
       // Only replace Chinese characters in text nodes
-      const replaced = node.textContent.replace(/([\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff])/g, '<span style="font-size:0.8em;">$1</span>');
+      const replaced = node.textContent.replace(/([\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af])/g, '<span style="font-size:0.8em;">$1</span>');
       //const replaced = node.textContent.replace(/([\u4e00-\u9fff])/g, '<span style="font-size:0.8em;">$1</span>');
       if (replaced !== node.textContent) {
         // Replace the text node with HTML nodes
