@@ -146,6 +146,10 @@ def extract_movie_info(entry):
     """从豆瓣RSS条目中提取标题、年份、封面等信息"""
     # 提取中文标题（示例：<title>看过摇曳露营△ 第二季</title>）
     title_cn = entry.title.replace("看过", "").strip()
+    
+    # 处理特殊符号 '/' ':'
+    title_cn = title_cn.replace("/", ".")
+    title_cn = title_cn.replace(":", ".")
 
     # 从描述中提取日文标题和年份（示例：ゆるキャン△ SEASON 2）
     foreign_title_match = re.search(r'title="([^"]+)"', entry.description)
